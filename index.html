@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>taskmaster</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid row text-secondary text-center align-items-center justify-content-center">Task
+            Master</div>
+    </header>
+    <main class="container-fulid">
+        <form onsubmit="app.listController.createList()" class="col-6">
+            <input type="text" id="listname" name="listname" placeholder="List Name...">
+            <label for="listcolor">Color:</label>
+            <input type="color" id="listcolor" name="listcolor">
+        </form>
+
+
+
+
+        <div class="row mt-3" id="lists">
+
+            <!-- <div class="row mx-3">
+            <p> <input class="text-weight-light border-0 border-bottom-100 " type="text" id="list" size="20"
+                    placeholder="List name..."> </p>
+        </div>
+        <div class="row" id="initialinput">
+
+
+        </div>
+
+        </div>
+
+        <div class="row" id="lists">
+            <div class="col-md-3 col-6"> -->
+            <!-- // NOTE this is supposed to be the list -->
+            <!-- <div class="card text-left">
+                    <div class="card-header">
+
+                        <h4 class="card-title">${this.title} <button class="text-warning btn btn-danger"
+                                onclick="app.taskController.deleteTask('${this.id}')">X</button> </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            ${this.Tasks}
+                        </div>
+
+
+                        <form onsubmit="app.taskController.createTask('${this.id}')">
+                            <input type="text" class="form-control border-0" name="taskTitle" id="taskTitle"
+                                aria-describedby="helpId" placeholder="Add Task...">
+                            <button class="btn btn-success" type="submit">+</button>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+        <!-- // NOTE this is supposed to be the task -->
+        <!-- <div class="card col-4">
+            <div class="card text-left">
+                <div class="card-header">${this.title}</div>
+                <div class="card-body">
+
+
+                    <form onsubmit="app.taskController.createTask('${this.id}')">
+                        <div class="form-group">
+                            <label for="">Task Title</label> <br>
+                            <input type="checkbox" id="${this.id}"> 
+                            <input type="text" class="form-control" name="taskTitle" id="taskTitle"
+                                aria-describedby="helpId" placeholder="Task name and descrip">
+
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="app"></div> -->
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

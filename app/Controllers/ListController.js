@@ -2,11 +2,12 @@ import { ProxyState } from "../AppState.js"
 import { listService } from "../Services/ListServices.js"
 
 function _draw() {
+    debugger
     console.log("drawing");
-    let l = ProxyState.lists
     let template = ''
-    ProxyState.tasks.forEach(l => template += l.Template)
+    ProxyState.lists.forEach(l => template += l.Template)
     document.getElementById("lists").innerHTML = template
+    console.log(template)
 }
 
 export default class ListController {
@@ -18,17 +19,18 @@ export default class ListController {
     }
 
     createList() {
-        debugger
         window.event.preventDefault()
         console.log("creating list");
         let form = window.event.target
         //access the target or form variable to pull values off of the form ids/names then access value.
         // @ts-ignore
-        console.log(form.title.value)
+        console.log(form.listname.value)
         // @ts-ignore
         let rawList = {
             // @ts-ignore
-            title: form.title.value
+            title: form.listname.value,
+            color: form.listcolor.value,
+
         }
         console.log(rawList)
         listService.createList(rawList)

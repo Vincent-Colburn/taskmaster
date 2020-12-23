@@ -9,7 +9,7 @@ export default class Task {
 
     get Template() {
         return /*html*/`
-    <div class="col-6">
+    <div class="col-6" style="background-color:${this.color}">
     <h5>
         <input type="checkbox" id="${this.id}">
        <label for="${this.id}"></label>${this.description}<br> 

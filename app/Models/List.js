@@ -6,8 +6,6 @@ export default class List {
         this.id = id || generateId()
         this.title = title
         this.color = color
-
-
     }
 
     get Template() {

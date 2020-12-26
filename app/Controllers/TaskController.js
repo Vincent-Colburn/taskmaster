@@ -6,15 +6,17 @@ export default class TaskController {
     }
 
     creatTask(listId) {
+        debugger
         window.event.preventDefault()
         console.log("creating task");
         let form = window.event.target
 
         let rawTask = {
-            title: form.taskTitle.value,
+            title: form.taskName.value,
             listId: listId
         }
-        toppingService.createTask(rawTask)
+        console.log(rawList)
+        taskService.createTask(rawTask)
 
         form.reset()
     }

@@ -4,7 +4,7 @@ import { saveState } from "../Utils/LocalStorage.js"
 
 class TaskService {
     delete(taskId) {
-        ProxyState.tasks = ProxyState.tasks.filter(t => t.id != tasksId)
+        ProxyState.tasks = ProxyState.tasks.filter(t => t.id != taskId)
     }
     createTask(rawTask) {
         let tasks = ProxyState.tasks

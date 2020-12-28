@@ -17,11 +17,13 @@
         <div class="container-fluid row text-secondary text-center align-items-center justify-content-center">Task
             Master</div>
     </header>
-    <main class="container-fulid">
+    <main class="container-fluid">
         <form onsubmit="app.listController.createList()" class="col-6">
-            <input type="text" id="listname" name="listname" placeholder="List Name...">
+            <input type="text" id="listname" name="listname" placeholder="List Name..." minlength="3" maxlength="15"
+                required>
             <label for="listcolor">Color:</label>
             <input type="color" id="listcolor" name="listcolor">
+            <button class="text-secondary text-weight-light" type="submit">Create</button>
         </form>
 
 

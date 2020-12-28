@@ -23,7 +23,7 @@ export default class ListController {
         let form = window.event.target
         //access the target or form variable to pull values off of the form ids/names then access value.
         // @ts-ignore
-        console.log(form.listname.value)
+        // console.log(form.listname.value)
         // @ts-ignore
         let rawList = {
             // @ts-ignore
@@ -39,7 +39,11 @@ export default class ListController {
     }
 
     deleteList(id) {
+        var choice = confirm("Press a damn button!");
+        if (choice == true) {
+            listService.deleteList(id)
+        }
         console.log("deleting list", id);
-        listService.deleteList(id)
+
     }
 }
